@@ -1,0 +1,13 @@
+- var sortOption = ['по цене','по популярности']
+.product-panel
+	.sort
+		span.sort__text Сортировать по
+		select.sort__select
+			each item in sortOption
+				option.sort__option= item
+	.view
+		span.view__text Вид каталога
+		ul.view__list
+			- for(var i = 0; i < 3; i++)
+				li(class="view__item view__item_#{i+1}")
+

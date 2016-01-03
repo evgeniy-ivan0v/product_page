@@ -1,0 +1,32 @@
+.product
+	each item in local.products
+		.product__item
+			.product__item-holder
+				.product__slideshow
+					.product__selected-image
+						img(src="#{item.image[0]}")
+					ul.product__thumb
+						each image in item.image
+							li.product__thumb-item
+								img(src="#{image}")
+				.product__code
+					span.product__article-text Артикул
+					span.product__article-code= item.code
+				.product__info
+					h2.product__name= item.name
+					article.product__description= item.description
+					table.product__options
+						each option in item.options
+							tr.product__option-row
+								td.product__option-name= option.name
+								td.product__option-value= option.value
+					.product__rating(data-rating="item.rating")
+						ul.product__star-list
+							-for(var i=0; i<5; i++)
+								li(class="product__star-item" )
+						span.product__reting-value= item.rating
+				.product__buy
+					span.product__price= item.price
+					span.product__status= item.status
+					a(href="#").product__buy-btn.button В корзину
+

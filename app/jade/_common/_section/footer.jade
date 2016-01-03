@@ -1,0 +1,11 @@
+footer.footer
+	.content-holder
+		block logo
+			include ../_block/logo-footer
+		block social
+			+social(local.social, 'big')
+		block nav
+			include nav
+	block copyright
+		include ../_block/copyright
+

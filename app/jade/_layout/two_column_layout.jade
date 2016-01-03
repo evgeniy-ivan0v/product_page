@@ -1,0 +1,33 @@
+include ../_adjustment/varibles
+include ../_adjustment/mixin
+doctype html
+html(lang="ru-RU")
+head
+	meta(charset="UTF-8")
+	meta(name=viewport content="width=device-width, initial-scale=1")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	title
+		block title
+body
+	section.page
+		block header
+			include ../_common/_section/header
+		block nav
+			include ../_common/_section/nav
+		block wrapper
+			section.wrapper.content-holder
+				block breadcrumbs
+					include ../_common/_block/breadcrumbs
+				block content-title
+					include ../_common/_block/content-title
+				block aside
+					aside.aside-left
+						block aside-content
+				block content
+					.content
+						block content-content
+		block seo_text
+			include ../_common/_block/seo-text
+	block footer
+		include ../_common/_section/footer
+						

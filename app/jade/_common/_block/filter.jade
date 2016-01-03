@@ -1,0 +1,21 @@
+.filter
+	ul.filter__availability-list
+		each item in local.filter.availability
+			li.filter__availability-item
+				a(href="#" title="#{item}").filter__availability-link= item
+	ul.filter__list
+		each key in local.filter.filter_list
+			li.filter__item
+				a(href="#" title="#{key.title}")= key.title
+				case key.name
+					when 'position'
+						+radio(key.item)
+					when 'brend'
+						+checkbox(key.item)
+					when 'price'
+						+price()
+					when 'color'
+						+color(key.item)
+					when 'system'
+						+checkbox(key.item)
+

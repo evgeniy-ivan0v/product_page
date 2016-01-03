@@ -1,0 +1,5 @@
+-var items = ["Главная", "Каталог"]
+ul.breadcrumbs
+	each item in items
+		li.breadcrumbs__item
+			a(href="#" title="#{item}").breadcrumbs__link= item

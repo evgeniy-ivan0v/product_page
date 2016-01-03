@@ -1,0 +1,5 @@
+- var links = ['Карта проезда', 'История заказов', 'Корзина'] 
+ul.header-link
+	each link in links
+		li.header-link__item
+			a(href="#" title="#{link}").header-link__link= link

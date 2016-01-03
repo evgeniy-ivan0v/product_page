@@ -1,0 +1,9 @@
+extends ../_layout/two_column_layout
+block title 
+	= local.page_title
+block aside-content
+	include ../_common/_block/filter
+block content-content
+	include ../_common/_block/product-panel
+	include ../_common/_block/product
+	include ../_common/_block/pagination
