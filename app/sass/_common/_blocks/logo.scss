@@ -1,0 +1,9 @@
+.logo {
+	float: left;
+	overflow: hidden;
+	@include block-size (238px,36px);
+	&__text {
+		position: absolute;
+		left: -9999px;
+	}
+}

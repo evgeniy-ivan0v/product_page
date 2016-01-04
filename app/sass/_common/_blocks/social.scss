@@ -1,0 +1,36 @@
+.social {
+	@extend %inline-block;
+	&__item {
+		@extend %inline-block;
+	}
+	&__link {
+		@include block-square (26px);
+		position: relative;
+		border-radius: 50%;
+		display: block;
+		text-indent: -9999px;
+		background-color: #333;
+		&:before {
+			@include transform (translate(-50%,-50%));
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+		}
+
+		$socials: vk, twitter, facebook;
+		@each $item in $socials {
+			&_#{$item}:before {
+				$icon-width: icons-sprite-width($item);
+				$icon-height: icons-sprite-height($item);
+				@include icons-sprite($item);
+				@include block-size ($icon-width, $icon-height);
+			}
+			&_#{$item}:hover:before {
+				@include icons-sprite($item + '-hover');
+			}
+		}
+	}
+	&_smoll {}
+	&_big {}
+}

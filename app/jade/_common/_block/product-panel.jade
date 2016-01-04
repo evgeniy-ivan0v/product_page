@@ -1,4 +1,6 @@
 - var sortOption = ['по цене','по популярности']
+- var viewClass = ['list-full', 'list-thumbnail', 'view-list']
+
 .product-panel
 	.sort
 		span.sort__text Сортировать по
@@ -8,6 +10,7 @@
 	.view
 		span.view__text Вид каталога
 		ul.view__list
-			- for(var i = 0; i < 3; i++)
-				li(class="view__item view__item_#{i+1}")
+			each item in viewClass
+				li(class="view__item view__item_#{item}")
+					a(href="#" class="view__link view__link_#{item}" data-view="#{item}")
 

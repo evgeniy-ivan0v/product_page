@@ -1,0 +1,89 @@
+@mixin font-face ($name) {
+	$filepath: "../fonts/" + $name;
+	@font-face {
+		font-family: "#{$name}";
+		src: url($filepath + ".eot");
+		src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+	       url($filepath + ".woff2") format('woff2'),
+	       url($filepath + ".woff") format('woff'),
+	       url($filepath + ".ttf") format('truetype'),
+	       url($filepath + ".svg#open_sansbold") format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+}
+
+@mixin block-size ($width, $height) {
+	width: $width;
+	height: $height;
+}
+@mixin block-square ($size) {
+	width: $size;
+	height: $size;
+}
+
+@mixin transform ($value...) {
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-ms-transform: $value;
+	-o-transform: $value;
+	transform: $value; 
+}
+
+@mixin transition ($value...) {
+	-webkit-transition: $value;
+	-moz-transition: $value;
+	-ms-transition: $value;
+	-o-transition: $value;
+	transition: $value;
+}
+
+@mixin placeholder ($color: #000000) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder {
+		color: $color;
+	}
+	&-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin user-select ($value: none) {
+	-webkit-user-select: $value;
+	-moz-user-select: $value;
+	-ms-user-select: $value;
+	user-select: $value;
+}
+
+%inline-block {
+	display: inline-block;
+	vertical-align: top;
+}
+
+%clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+%diogonal-gradient {
+	background-color: $color-orange;
+	background-image: -moz-linear-gradient( 56deg, rgb(255,102,0) 0%, rgb(255,106,27) 45%, rgb(255,110,53) 99%);
+	background-image: -webkit-linear-gradient( 56deg, rgb(255,102,0) 0%, rgb(255,106,27) 45%, rgb(255,110,53) 99%);
+	background-image: -ms-linear-gradient( 56deg, rgb(255,102,0) 0%, rgb(255,106,27) 45%, rgb(255,110,53) 99%);
+	background-image: linear-gradient( 56deg, rgb(255,102,0) 0%, rgb(255,106,27) 45%, rgb(255,110,53) 99%);
+}
+
+@function em($pixels, $context: $base-font-size) {
+	@return #{$pixels/$context}em;
+}
+
+

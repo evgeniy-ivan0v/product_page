@@ -1,0 +1,11 @@
+.wrapper {
+	@extend %clearfix;
+}
+.aside-left {
+	float: left;
+	width: 332px;
+}
+.content {
+	float: right;
+	width: 743px;
+}

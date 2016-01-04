@@ -1,0 +1,33 @@
+.nav {
+	border-bottom: 2px solid $border-color;
+	width: 100%;
+	background-color: #FFF;
+	&__menu {
+		@extend %clearfix;
+	}
+	&__item {
+		float: left;
+		&_active {
+			.nav__link {
+				@extend %diogonal-gradient;
+				font-family: 'opensans-semibold', Arial, sans-serif;
+				color: #fff;
+				&:hover {
+					@extend %diogonal-gradient;
+				}
+			}
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		font-family: 'opensans-regular', Arial, sans-serif;
+		font-size: em(16);
+		color: $text-color;
+		background-color: #FFF;
+		text-align: center;
+		&:hover {
+			background-color: #e4e2e2;
+		}
+	}
+}

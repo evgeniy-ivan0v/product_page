@@ -6,7 +6,7 @@
 	ul.filter__list
 		each key in local.filter.filter_list
 			li.filter__item
-				a(href="#" title="#{key.title}")= key.title
+				a(href="#" title="#{key.title}").filter__title-link= key.title
 				case key.name
 					when 'position'
 						+radio(key.item)

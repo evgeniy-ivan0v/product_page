@@ -8,6 +8,7 @@ head
 	meta(http-equiv="X-UA-Compatible" content="IE=edge")
 	title
 		block title
+	link(rel="stylesheet" href="css/main.css")
 body
 	section.page
 		block header
@@ -26,8 +27,12 @@ body
 				block content
 					.content
 						block content-content
-		block seo_text
-			include ../_common/_block/seo-text
+			block seo_text
+				include ../_common/_block/seo-text
 	block footer
 		include ../_common/_section/footer
+	block script-footer
+		script(src="js/jquery.js")
+		script(src="js/jquery.nouislider.all.min.js")
+		script(src="js/main.js")
 						

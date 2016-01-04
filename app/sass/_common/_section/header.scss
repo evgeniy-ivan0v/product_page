@@ -1,0 +1,10 @@
+.header {
+	&__header-top {
+		background-color: #fff;
+		border-bottom: 2px solid $border-color;
+		@extend %clearfix;
+	}
+	&__header-main {
+		@extend %clearfix;
+	}
+}

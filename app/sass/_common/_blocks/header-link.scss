@@ -1,0 +1,15 @@
+.header-link {
+	float: right;
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		font-family: 'opensans-semibold', Arial, sans-serif;
+		font-size: em(16);
+		color: $text-color;
+		text-decoration: underline;
+		&:hover {
+			color: $color-orange;
+		}
+	}
+}

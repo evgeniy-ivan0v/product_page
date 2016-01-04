@@ -1,4 +1,4 @@
-.product
+.product__list.product__list_list-thumbnail
 	each item in local.products
 		.product__item
 			.product__item-holder
@@ -6,20 +6,23 @@
 					.product__selected-image
 						img(src="#{item.image[0]}")
 					ul.product__thumb
+						-var i = 1;
 						each image in item.image
-							li.product__thumb-item
+
+							li(class="product__thumb-item" + ((i == 1) ? " product__thumb-item_active" : ''))
 								img(src="#{image}")
+							- i++
 				.product__code
 					span.product__article-text Артикул
 					span.product__article-code= item.code
 				.product__info
 					h2.product__name= item.name
 					article.product__description= item.description
-					table.product__options
+					ul.product__options
 						each option in item.options
-							tr.product__option-row
-								td.product__option-name= option.name
-								td.product__option-value= option.value
+							li.product__option-row
+								span.product__option-name= option.name
+								span.product__option-value= option.value
 					.product__rating(data-rating="item.rating")
 						ul.product__star-list
 							-for(var i=0; i<5; i++)

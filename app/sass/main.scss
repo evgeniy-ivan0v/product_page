@@ -1,11 +1,26 @@
 @import "compass";
 
+@import "_adjustment/_varibles";
+@import "_adjustment/_mixins";
+@import "_adjustment/_font";
+@import "_adjustment/_icons";
+@import "_adjustment/_normalize";
 
-//@import "_adjustment/_normalize";
-// @import "_adjustment/_varibles";
-// @import "_adjustment/_mixins";
+@import "_layout/_layouts";
+@import "_common/_section/header";
+@import "_common/_section/nav.";
+@import "_common/_section/wrapper";
 
-// @import "_layout/_layouts";
-body {
-	width: 100%;
-}
+@import "_common/_blocks/social";
+@import "_common/_blocks/contact-header";
+@import "_common/_blocks/logo";
+@import "_common/_blocks/search";
+@import "_common/_blocks/header-link";
+
+@import "_common/_blocks/breadcrumbs";
+@import "_common/_blocks/content-title";
+@import "_common/_blocks/filter";
+@import "_common/_blocks/product-panel";
+@import "_common/_blocks/products.scss";
+
+

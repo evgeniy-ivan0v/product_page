@@ -1,0 +1,45 @@
+.product-panel {
+	background-color: #e4ebee;
+	border: 1px solid #dee1e4;
+	border-radius: 4px;
+	@extend %clearfix;
+}
+.sort {
+	@extend %inline-block;
+	float: left;
+	&__text {
+		color: #5d656c;
+		font-size: em(14);
+	}
+}
+.view {
+	@extend %inline-block;
+	float: right;
+	&__text {
+		color: #5d656c;
+		font-size: em(14);
+	}
+	&__list {
+		@extend %inline-block;
+	}
+	&__item {
+		@extend %inline-block;
+		border-left: 1px solid #dee1e4;
+	}
+	&__link {
+		@extend %inline-block;
+		text-decoration: none;
+		$views: list-full, list-thumbnail, view-list;
+		@each $item in $views {
+			&_#{$item} {
+				$icon-width: icons-sprite-width($item);
+				$icon-height: icons-sprite-height($item);
+				@include icons-sprite($item);
+				@include block-size ($icon-width, $icon-height);
+			}
+			&_#{$item}:hover {
+				@include icons-sprite($item + '-hover');
+			}
+		}
+	}
+}

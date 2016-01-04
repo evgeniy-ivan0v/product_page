@@ -1,0 +1,38 @@
+.contact-header {
+	float: right;
+	@extend %inline-block;
+	&__address, &__phone {
+		@extend %inline-block;
+		position: relative;
+		color: $text-color;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: -20px;
+		}
+	}
+	&__address {
+		font-family: 'opensans-regular', Arial, sans-serif;
+		font-size: em(14);
+		font-style: normal;
+		&:before {
+			width: icons-sprite-width(map-pin);
+			height: icons-sprite-height(map-pin);
+			@include icons-sprite(map-pin);
+		}
+	}
+	&__phone {
+		font-family: 'opensans-semibold', Arial, sans-serif;
+		font-size: em(18);
+		text-decoration: none;
+		&:before {
+			width: icons-sprite-width(telephone);
+			height: icons-sprite-height(telephone);
+			@include icons-sprite(telephone);
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
