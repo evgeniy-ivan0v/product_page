@@ -2,6 +2,10 @@
 	@extend %inline-block;
 	&__item {
 		@extend %inline-block;
+		margin-left: 12px;
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 	&__link {
 		@include block-square (26px);
@@ -17,8 +21,7 @@
 			left: 50%;
 			top: 50%;
 		}
-
-		$socials: vk, twitter, facebook;
+		$socials: vk-smoll, twitter-smoll, facebook-smoll;
 		@each $item in $socials {
 			&_#{$item}:before {
 				$icon-width: icons-sprite-width($item);
@@ -31,6 +34,4 @@
 			}
 		}
 	}
-	&_smoll {}
-	&_big {}
 }

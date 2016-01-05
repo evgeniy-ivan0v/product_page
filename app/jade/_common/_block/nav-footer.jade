@@ -1,0 +1,5 @@
+nav.nav-footer
+	menu.nav-footer__menu
+		each category, index in local.categories
+			li.nav-footer__item
+				a(href="#" title="#{category}").nav-footer__link= category

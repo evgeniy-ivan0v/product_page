@@ -2,10 +2,10 @@ mixin social(object, modificator)
 	ul(class="social "+ ((!modificator) ? '' : 'social_#{modificator}'))
 		each value, key in object
 			li(class="social__item")
-				a(href="#{value}" target="_blank" title="#{value}" class="social__link social__link_#{key}")= value
+				a(href="#{value}" target="_blank" title="#{value}" class="social__link social__link_#{key}"+ ((!modificator) ? '' : '-#{modificator}'))= value
 
 mixin radio(object)
-	ul.filter__sub-list
+	ul.filter__sub-list.filter__hidden-block
 		each item, index in object
 			li.filter__sub-item
 				label.filter__label.filter__label_radio
@@ -14,7 +14,7 @@ mixin radio(object)
 					span.filter__text= item
 
 mixin checkbox(object)
-	ul.filter__sub-list
+	ul.filter__sub-list.filter__hidden-block
 		each item in object
 			li.filter__sub-item
 				label.filter__label.filter__label_checkbox
@@ -24,7 +24,7 @@ mixin checkbox(object)
 		li.filter__reset-item
 			a(href="#").filter__reset-link Сбросить фильтр
 mixin price()
-	.price
+	.price.filter__hidden-block
 		label.price__label
 			span.price__text от
 			input(type="text").price__input.price__input_lower
@@ -33,7 +33,7 @@ mixin price()
 			input(type="text").price__input.price__input_upper
 		#slider.price__slider
 mixin color(object)
-	ul.filter__sub-list.filter__sub-list.color
+	ul.filter__sub-list.filter__sub-list.color.filter__hidden-block
 		each item in object
 			li.filter__sub-item.color__item
 				a(href="#" style="background-color:\##{item}").filter__link.color__link

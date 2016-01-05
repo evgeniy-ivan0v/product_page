@@ -10,6 +10,7 @@
 @import "_common/_section/header";
 @import "_common/_section/nav.";
 @import "_common/_section/wrapper";
+@import "_common/_section/footer";
 
 @import "_common/_blocks/social";
 @import "_common/_blocks/contact-header";
@@ -22,5 +23,9 @@
 @import "_common/_blocks/filter";
 @import "_common/_blocks/product-panel";
 @import "_common/_blocks/products.scss";
+@import "_common/_blocks/pagination";
+@import "_common/_blocks/seo-text";
+
+@import "_common/_blocks/nav-footer";
 
 

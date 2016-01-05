@@ -1,0 +1,22 @@
+.nav-footer {
+	clear: both;
+    text-align: right;
+    width: 567px;
+    float: right;
+    margin-top: -2px;
+	&__item {
+		@extend %inline-block;
+		margin-left: 23px;
+    	margin-bottom: 14px;
+    	&:first-child {
+    		margin-left: 0;
+    	}
+	}
+	&__link {
+		font-size: em(14);
+		color: #fff;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.pagination {
+	text-align: right;
+	&__item {
+		@extend %inline-block;
+		margin-left: 1px;
+		&:last-child {
+			margin-left: 0;
+		}
+	}
+	&__link {
+		display: block;
+		text-align: center;
+		padding: 0.3em 0;
+		border-radius: 3px;
+		background-color: #fbfbfb;
+		@include block-size(26px, 25px);
+		text-decoration: none;
+		font-family: 'opensans-bold', Arial, sans-serif;
+		color: #7f7f7f;
+		font-size: em(12);
+		border: 1px solid #dee1e4;
+		&:hover {
+			box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), inset 0px 1px 0px 1px rgba(255, 255, 255, 0.004);
+			border-color: #aeaeae;
+  		}
+  		&_active {
+  			background-color: #e0e0e0;
+  			border-color: #c8c8c8;
+			box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  		}
+	}
+}

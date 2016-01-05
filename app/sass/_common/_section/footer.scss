@@ -1,0 +1,41 @@
+.footer {
+	background-image: url("../images/footer_bg.jpg");
+	background-repeat: repeat;
+	background-color: #373737;
+	height: $footer-height;
+	margin-top: -$footer-height;
+	padding: 2.15em 0em;
+	position: relative;
+	.content-holder {
+		@extend %clearfix;
+	}
+	.logo {
+		margin-top: 37px;
+	}
+	.social {
+		float: right;
+    	margin-right: 5px;
+		&__item {
+			margin-left: 22px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		&__link {
+			@include block-square (43px);
+			background-color: #fff;
+			$socials-foot: vk-big, twitter-big, facebook-big;
+			@each $item in $socials-foot {
+				&_#{$item}:before {
+					$icon-width: icons-sprite-width($item);
+					$icon-height: icons-sprite-height($item);
+					@include icons-sprite($item);
+					@include block-size ($icon-width, $icon-height);
+				}
+				&_#{$item}:hover:before {
+					@include icons-sprite($item + '-hover');
+				}
+			}
+		}
+	}
+}

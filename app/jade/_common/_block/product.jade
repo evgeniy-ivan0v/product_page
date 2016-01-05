@@ -12,9 +12,6 @@
 							li(class="product__thumb-item" + ((i == 1) ? " product__thumb-item_active" : ''))
 								img(src="#{image}")
 							- i++
-				.product__code
-					span.product__article-text Артикул
-					span.product__article-code= item.code
 				.product__info
 					h2.product__name= item.name
 					article.product__description= item.description
@@ -23,13 +20,16 @@
 							li.product__option-row
 								span.product__option-name= option.name
 								span.product__option-value= option.value
-					.product__rating(data-rating="item.rating")
+					.product__rating(data-rating="#{item.rating}")
 						ul.product__star-list
 							-for(var i=0; i<5; i++)
-								li(class="product__star-item" )
+								li(class="product__star-item" +((i+1 <= 4) ? " product__star-item_active" : "" ))
 						span.product__reting-value= item.rating
 				.product__buy
 					span.product__price= item.price
 					span.product__status= item.status
 					a(href="#").product__buy-btn.button В корзину
+				.product__code
+					span.product__article-text Артикул
+					span.product__article-code= item.code
 

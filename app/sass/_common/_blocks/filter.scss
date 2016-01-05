@@ -3,9 +3,11 @@
 		border: 1px solid #dee1e4;
 		border-radius: 4px;
 		overflow: hidden;
+		margin-bottom: 39px;
 	}
 	&__availability-item {}
 	&__availability-link {
+		padding: 0.9em 2.1em;
 		text-decoration: none;
 		color: #7f7f7f;
 		font-size: em(14);
@@ -23,10 +25,15 @@
 	}
 	&__item {
 		border-bottom: 1px solid #dee1e4;
+		padding: 0.7em 1.8em 0.1em;
+		&:last-child {
+			border-bottom: none;
+		}
 	}
 	&__title-link {
 		@include transition (opacity .3s ease);
 		display: block;
+		margin-bottom: 16px;
 		font-family: 'opensans-semibold', Arial, sans-serif;
 		font-size: em(16);
 		text-decoration: none;
@@ -36,18 +43,25 @@
 			opacity: 0;
 			display: block;
 			position: absolute;
-			right: 10px;
-			top: 0;
+			right: -20px;
+    		top: 8px;
 			content: "";
 			width: icons-sprite-width(arow-up-big);
 			height: icons-sprite-height(arow-up-big);
 			@include icons-sprite(arow-up-big);
+			@include transition (transform 0.5s ease);
+		}
+		&_close:after {
+			@include transform (rotate(180deg));
 		}
 		&:hover:after {
 			opacity: 1;
 		}
 	}
-	&__label {}
+	&__label {
+		margin-bottom: 15px;
+    	display: inline-block;
+	}
 	&__input {
 		&_radio, &_checkbox {
 			position: absolute;
@@ -84,6 +98,10 @@
 	&__text {
 		font-size: em(14);
 		@extend %inline-block;
+		margin-left: 11px;
+	}
+	&__reset-item {
+		margin: -8px 0 17px 2px;
 	}
 	&__reset-link {
 		@extend .link;
@@ -91,20 +109,28 @@
 }
 
 .price {
+	margin-bottom: 32px;
 	&__label {
 		@extend %inline-block;
+		margin-bottom: 20px;
 	}
 	&__text {
 		@extend %inline-block;
 		font-size: em(14);
+    	margin: 4px 12px 1px 0;
 	}
 	&__input {
+		&_lower {
+    		margin-right: 43px;
+    	}
 		@extend %inline-block;
 		width: 80px;
 		border-radius: 3px;
 		box-shadow: inset 0px 1px 1px 0px rgba(148, 148, 148, 0.43);
 		border: 1px solid $border-color;
 		color: $text-color;
+		font-size: em(13);
+    	padding: 0.3em 0.5em;
 	}
 	.noUi {
 		&-target {
@@ -137,13 +163,17 @@
 			@include icons-sprite(triger);
 			position: relative; z-index: 1;
 			cursor: pointer;
+			left: -5px;
 		}
 	}
 }
 .color {
+	margin-left: -20px;
 	&__item {
 		@extend %inline-block;
-		@include block-square (35px);
+		@include block-square (36px);
+		margin-left: 20px;
+    	margin-bottom: 23px;
 	}
 	&__link {
 		display: block;

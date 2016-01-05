@@ -1,8 +1,15 @@
 .breadcrumbs {
+	margin-bottom: 20px;
 	&__item {
 		@extend %inline-block;
+		position: relative;
+    	padding-right: 10px;
 		&:after {
 			content: ">";
+			display: inline-block;
+		    position: absolute;
+		    top: 2px;
+		    right: 0px;
 		}
 		&:last-child:after {
 			display: none;

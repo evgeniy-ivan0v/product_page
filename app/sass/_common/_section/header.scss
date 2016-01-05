@@ -3,8 +3,13 @@
 		background-color: #fff;
 		border-bottom: 2px solid $border-color;
 		@extend %clearfix;
+		padding: 1.55em 0;
 	}
 	&__header-main {
 		@extend %clearfix;
+		padding: 1.9em 0 1.8em;
+		.search {
+			margin-left: 56px;
+		}
 	}
 }

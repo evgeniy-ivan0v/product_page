@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
  	jade = require('gulp-jade'),
  	compass = require('gulp-compass'),
-    sass = require('gulp-sass'),
+  sass = require('gulp-sass'),
+  browserSync = require('browser-sync'),
  	plugin = require('gulp-load-plugins')();
 
 
@@ -41,6 +42,15 @@ gulp.task('sass', function() {
 gulp.task('watch', function(){
  gulp.watch(paths.jadeAll, ['jade']);
  gulp.watch(paths.scssAll, ['compass']);
+});
+
+gulp.task('server', function () {
+  browserSync({
+    port: 9000,
+    server: {
+      baseDir: 'app'
+    }
+  });
 });
 
 // gulp.task("server", function () {

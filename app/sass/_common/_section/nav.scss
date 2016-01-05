@@ -2,6 +2,7 @@
 	border-bottom: 2px solid $border-color;
 	width: 100%;
 	background-color: #FFF;
+	margin-bottom: 25px;
 	&__menu {
 		@extend %clearfix;
 	}
@@ -14,6 +15,7 @@
 				color: #fff;
 				&:hover {
 					@extend %diogonal-gradient;
+					opacity: 0.8;
 				}
 			}
 		}
@@ -26,6 +28,7 @@
 		color: $text-color;
 		background-color: #FFF;
 		text-align: center;
+		padding: 0.95em 0.85em 0.95em 1.05em;
 		&:hover {
 			background-color: #e4e2e2;
 		}

@@ -34,13 +34,6 @@ ul, menu {
 		display: block;
 	}
 }
-.footer {
-	background-image: url("../images/footer_bg.jpg");
-	background-repeat: repeat;
-	background-color: #373737;
-	height: $footer-height;
-	margin-top: -$footer-height;
-}
 .link {
 	color: $color-link;
 	font-size: em(14);

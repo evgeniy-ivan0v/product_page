@@ -1,5 +1,8 @@
 ul.pagination
-	li.pagination__item <
-		-for(var i = 0; i<3; i++)
-			li.pagination__item= i+1
-	li.pagination__item >
+	li.pagination__item
+		a(href="#").pagination__link <
+	-for(var i = 0; i<3; i++)
+		li.pagination__item
+			a(href="#" class="pagination__link" + ((i == 1) ? " pagination__link_active" : ""))= i+1
+	li.pagination__item
+		a(href="#").pagination__link >
