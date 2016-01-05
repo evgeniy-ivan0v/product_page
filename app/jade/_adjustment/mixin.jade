@@ -10,7 +10,7 @@ mixin radio(object)
 			li.filter__sub-item
 				label.filter__label.filter__label_radio
 					input(type="radio" name="position").filter__input.filter__input_radio
-					label.filter__bg-input_radio
+					i.filter__bg-input_radio
 					span.filter__text= item
 
 mixin checkbox(object)
@@ -19,7 +19,7 @@ mixin checkbox(object)
 			li.filter__sub-item
 				label.filter__label.filter__label_checkbox
 					input(type="checkbox" name="brend").filter__input.filter__input_checkbox
-					label.filter__bg-input_checkbox
+					i.filter__bg-input_checkbox
 					span.filter__text= item
 		li.filter__reset-item
 			a(href="#").filter__reset-link Сбросить фильтр

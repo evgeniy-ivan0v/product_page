@@ -1,6 +1,6 @@
 nav.nav
 	.content-holder
-		menu.nav__menu
+		ul.nav__menu
 			each category, index in local.categories
 				li(class=(index == 1) ? "nav__item_active" : '').nav__item
 					a(href="#" title="#{category}").nav__link= category

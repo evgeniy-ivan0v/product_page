@@ -4,13 +4,13 @@
 			.product__item-holder
 				.product__slideshow
 					.product__selected-image
-						img(src="#{item.image[0]}")
+						img(src="#{item.image[0]}" alt="мобильные телефоны")
 					ul.product__thumb
 						-var i = 1;
 						each image in item.image
 
 							li(class="product__thumb-item" + ((i == 1) ? " product__thumb-item_active" : ''))
-								img(src="#{image}")
+								img(src="#{image}" alt="мобильные телефоны")
 							- i++
 				.product__info
 					h2.product__name= item.name
